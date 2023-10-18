@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <INPUT type="button" value="Window" OnClick="alert(window.status);">
+    <INPUT type="button" value="Navigator" OnClick="alert(navigator.appVersion);">
+    <INPUT type="button" value="Location" OnClick="alert(location.href	);">
+      <input type="button" value="Screen" onClick="alert(screen.width + 'X' + screen.height);">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>История зарождения теннисного спорта</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <script type="text/javascript">alert(document.lastModified)</script>
+  <script type="text/javascript">
+    function changeParagraphStyle(element) {
+      element.style.paddingRight = '3cm';
+      element.style.textIndent = '2.5cm';
+    }
+  
+    function restoreParagraphStyle(element) {
+      element.style.paddingRight = '';
+      element.style.textIndent = '';
+    }
+  </script>
+  <script>
+    // Функция для переключения стиля при наведении и отведении мыши
+    function toggleCellStyle(cell) {
+      if (cell.classList.contains("table-cell")) {
+        cell.className = "table-cell-alternate";
+      } else {
+        cell.className = "table-cell";
+      }
+    }
+  </script>
+  <script>
+      function hideMiddleImage() {
+        var middleImage = document.getElementsByName("image2")[0];
+        middleImage.style.display = "none";
+      }
+
+      function showMiddleImage() {
+        var middleImage = document.getElementsByName("image2")[0];
+        middleImage.style.display = "block";
+      }
+
+      function swapImages() {
+        var image1 = document.getElementsByName("image1")[0];
+        var image3 = document.getElementsByName("image3")[0];
+
+        var tempZIndex = image1.style.zIndex;
+        image1.style.zIndex = image3.style.zIndex;
+        image3.style.zIndex = tempZIndex;
+      }
+      </script>
+
+</head>
+
+<body>
+<div class="text">
+    <main>
+      <script> </script>
+      <h1>История зарождения теннисного спорта</h1>
+<p onmouseover="this.style.color = 'red'; this.style.fontFamily = 'Arial';" onmouseout="this.style.color = ''; this.style.fontFamily = '';">Теннисный спорт является одним из старейших и наиболее популярных видов спорта в мире. Его история насчитывает множество важных моментов и развития.</p>
+
+<h2>Хронология зарождения теннисного спорта</h2>
+<p class="news"><span class="date">12-й век - </span>Первые упоминания о теннисе</p>
+<p onmouseover="changeParagraphStyle(this);" onmouseout="restoreParagraphStyle(this);"> Первые упоминания о теннисе датируются XII веком, когда этот вид спорта играли с помощью руки и мяча на закрытых кортах.</p>
+
+<p class="news"><span class="date">16-й век - </span>Развитие современных правил</p>
+<p>В XVI веке теннисные правила начали приобретать более схожий с современными формат, и теннис стал популярным среди аристократии.</p>
+
+<p class="news"><span class="date">19-й век - </span>Появление теннисных клубов</p>
+<p>В XIX веке были основаны первые теннисные клубы и проведены первые турниры, что способствовало распространению спорта.</p>
+
+<p class="news"><span class="date">20-й век - </span>Профессиональный теннис</p>
+<p>В 20-м веке теннис стал профессиональным видом спорта с множеством знаменитых теннисистов и турниров.</p>
+
+      <table>
+        <tr>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 1</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 2</td>
+        </tr>
+        <tr>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 3</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 4</td>
+        </tr>
+      </table>
+
+      
+      
+      <button onclick="hideMiddleImage()">Скрыть средний рисунок</button>
+      <button onclick="showMiddleImage()">Показать средний рисунок</button>
+      <button onclick="swapImages()">Поменять слои</button>
+      
+      <img class="image" src="tennis.jpg" name="image1" style="z-index: 1;">
+      <img class="image" src="horse.jpg" name="image2" style="z-index: 2;">
+      <img class="image" src="salon_krasoti.jpeg" name="image3" style="z-index: 3;">
+
+
+      
+    </main>
+  </div>
+</body>
+</html>
